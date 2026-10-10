@@ -1,0 +1,222 @@
+[gd_scene format=3 uid="uid://c1jgurpkegtxx"]
+
+[ext_resource type="Script" uid="uid://d2vitxuskhy7u" path="res://login.gd" id="1_script"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.035, 0.19, 0.13, 0.9)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.82, 0.65, 0.3, 0.9)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+shadow_color = Color(0, 0, 0, 0.32)
+shadow_size = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_start"]
+bg_color = Color(0.75, 0.12, 0.07, 1)
+border_width_bottom = 4
+border_color = Color(0.98, 0.66, 0.19, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0.18, 0.02, 0.01, 0.45)
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_quit"]
+bg_color = Color(0.12, 0.32, 0.23, 1)
+border_width_bottom = 3
+border_color = Color(0.7, 0.58, 0.32, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="Login" type="Control" unique_id=126785603]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Felt" type="ColorRect" parent="." unique_id=731604886]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.025, 0.25, 0.16, 1)
+
+[node name="OuterFrame" type="Panel" parent="." unique_id=288350739]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 18.0
+offset_right = -18.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="TopMark" type="Label" parent="." unique_id=635328768]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_top = 34.0
+offset_right = 150.0
+offset_bottom = 62.0
+theme_override_colors/font_color = Color(0.92, 0.77, 0.45, 1)
+theme_override_font_sizes/font_size = 15
+text = "HAPPY LANDLORDS  ·  经典国民棋牌"
+horizontal_alignment = 1
+
+[node name="Spade" type="Label" parent="." unique_id=110325045]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.13
+anchor_top = 0.28
+anchor_right = 0.13
+anchor_bottom = 0.28
+offset_left = -42.0
+offset_top = -48.0
+offset_right = 42.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.91, 0.84, 0.64, 0.78)
+theme_override_font_sizes/font_size = 76
+text = "♠"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Heart" type="Label" parent="." unique_id=576738708]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.86
+anchor_top = 0.34
+anchor_right = 0.86
+anchor_bottom = 0.34
+offset_left = -40.0
+offset_top = -45.0
+offset_right = 40.0
+offset_bottom = 45.0
+theme_override_colors/font_color = Color(0.84, 0.22, 0.14, 0.9)
+theme_override_font_sizes/font_size = 72
+text = "♥"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterPanel" type="Panel" parent="." unique_id=166039011]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -248.0
+offset_right = 250.0
+offset_bottom = 248.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="Content" type="VBoxContainer" parent="CenterPanel" unique_id=293246066]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 34.0
+offset_top = 40.0
+offset_right = -34.0
+offset_bottom = -38.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 14
+alignment = 1
+
+[node name="Seal" type="Label" parent="CenterPanel/Content" unique_id=479916783]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.96, 0.72, 0.28, 1)
+theme_override_font_sizes/font_size = 20
+text = "♣  斗地主  ♦"
+horizontal_alignment = 1
+
+[node name="Title" type="Label" parent="CenterPanel/Content" unique_id=602619395]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.89, 0.63, 1)
+theme_override_font_sizes/font_size = 54
+text = "欢乐斗地主"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="CenterPanel/Content" unique_id=154182231]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.86, 0.72, 1)
+theme_override_font_sizes/font_size = 17
+text = "经典玩法 · 欢乐开局"
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="CenterPanel/Content" unique_id=343290671]
+custom_minimum_size = Vector2(0, 14)
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="CenterPanel/Content" unique_id=794024770]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.94, 0.78, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.91, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_start")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_start")
+theme_override_styles/hover = SubResource("StyleBoxFlat_start")
+text = "开始"
+
+[node name="QuitButton" type="Button" parent="CenterPanel/Content" unique_id=167773620]
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.97, 0.91, 0.75, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_quit")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_quit")
+theme_override_styles/hover = SubResource("StyleBoxFlat_start")
+text = "离开"
+
+[node name="Status" type="Label" parent="CenterPanel/Content" unique_id=771052841]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.97, 0.76, 0.42, 1)
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
+
+[node name="BottomMark" type="Label" parent="." unique_id=657266805]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -50.0
+offset_right = 120.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.88, 0.78, 0.56, 0.78)
+theme_override_font_sizes/font_size = 13
+text = "祝您手气常胜  ·  好牌连连"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="CenterPanel/Content/StartButton" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="CenterPanel/Content/QuitButton" to="." method="_on_quit_pressed"]
